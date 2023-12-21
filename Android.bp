@@ -1156,6 +1156,11 @@ cc_library {
             local_include_dirs: ["config/arm64"],
         },
 
+        loongarch64: {
+            srcs: libvpx_generic_c_srcs,
+            local_include_dirs: ["config/generic"],
+        },
+
         x86: {
             srcs: libvpx_x86_c_srcs + libvpx_x86_asm_srcs,
             local_include_dirs: ["config/x86"],
@@ -1217,6 +1222,9 @@ cc_fuzz {
         x86_64: {
             local_include_dirs: ["config/x86_64"],
         },
+	loongarch64: {
+	    local_include_dirs: ["config/generic"],
+	},
     },
     cflags: ["-DDECODER=vp9"],
     static_libs: [
@@ -1253,6 +1261,9 @@ cc_fuzz {
         x86_64: {
             local_include_dirs: ["config/x86_64"],
         },
+	loongarch64: {
+	    local_include_dirs: ["config/generic"],
+	},
     },
 
     cflags: ["-DDECODER=vp8"],
