@@ -64,6 +64,11 @@ cc_library {
             local_include_dirs: ["config/arm64"],
         },
 
+        loongarch64: {
+            srcs: libvpx_generic_c_srcs,
+            local_include_dirs: ["config/generic"],
+        },
+
         riscv64: {
             srcs: libvpx_generic_c_srcs,
             local_include_dirs: ["config/generic"],
